@@ -1,0 +1,28 @@
+import random
+print("ROCKS PAPER SCISSOR")
+while(True):
+    print("""Enter Choice
+    Rock
+    Paper
+    Scissor
+    Enter 'Q' for quiting
+    """)
+    choice = input("Enter Choice").capitalize()
+    comp_choice = random.choice(['Rock', 'Paper', 'Scissor'])
+    if(choice == 'Q'):
+        break
+    elif(choice == comp_choice):
+        print("Computer Choice is", comp_choice)
+        print("Its a Tie")
+    elif(choice == 'Rock' and comp_choice == 'Scissor') or \
+    (choice == 'Paper' and comp_choice == 'Rock')or \
+    (choice == 'Scissor' and comp_choice == 'Paper'):
+        print("Computer Choice is", comp_choice)
+        print("You win")
+    elif(comp_choice == 'Rock' and choice == 'Scissor') or \
+    (comp_choice == 'Paper' and choice == 'Rock')or \
+    (comp_choice == 'Scissor' and choice == 'Paper'):
+        print("Computer Choice is", comp_choice)
+        print("Computer win")
+    else:
+        print("Invalid Choice!! Choose wisely")
